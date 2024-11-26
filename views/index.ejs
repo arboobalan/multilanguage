@@ -1,0 +1,21 @@
+<%- include('./common/header') %>
+
+  <div class="container-fluid mt-3">
+
+    <h1> <%= title %> </h1>
+    <h3> <%= greeting %> </h3>
+
+      <form method="get" action="/">
+        <label for="lang">  <%= select_language %> : </label>
+        <select name="lang" class="form-control w-25" id="lang" onchange="this.form.submit()">
+          <option value="en" <%=locale==='en' ? 'selected' : '' %>>English</option>
+          <option value="ta" <%=locale==='ta' ? 'selected' : '' %>>தமிழ்</option>
+          <option value="kn" <%=locale==='kn' ? 'selected' : '' %>>ಕನ್ನಡ</option>
+          <option value="ml" <%=locale==='ml' ? 'selected' : '' %>>മലയാളം</option>
+          <option value="te" <%=locale==='te' ? 'selected' : '' %>>తెలుగు</option>
+        </select>
+      </form>
+
+  </div>
+
+  <%- include('./common/footer') %>
